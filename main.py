@@ -1,13 +1,12 @@
-meem = {"LOL": "komik bir şeye verilen cevap", 
-        "CRINGE": "garip ya da utandırıcı bir şey"
-        }
+import random
 
-while True:
-    
-    kelime = input("Öğrenmek istediğin terim:")
-        
-    if kelime in meem.keys():
-        print(meem[kelime])
-            
-    else:
-        print("Terim yok!")
+
+karakterler = "+-/*!&$#?=@abcdefghijklnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
+uzunluk = int(input("Parolanın uzunluğunu girin:"))
+parola = ""
+for i in range(uzunluk):
+    parola += random.choice(karakterler)
+
+print(parola)
+
+
